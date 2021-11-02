@@ -1,0 +1,31 @@
+@import "/src/vars.scss";
+.about {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  border-left: 20px solid $orange;
+  margin: 64px 0;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    column-gap: 124px;
+    .img {
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      justify-content: center;
+      h1 {
+        span {
+          color: $orange;
+        }
+      }
+      p {
+        max-width: 800px;
+    
+      }
+    }
+  }
+}

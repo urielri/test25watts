@@ -1,0 +1,125 @@
+@import "/src/vars.scss";
+.container {
+  display: grid;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 1fr 200px;
+}
+.header {
+  transition: all 0.3s 0.1s ease-out;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid $orange;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  .content {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 0 64px;
+    .logo {
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease-out;
+    }
+    .menu {
+      display: flex;
+      column-gap: 48px;
+      height: 100%;
+      align-items: center;
+    }
+  }
+}
+.scroll {
+  background: $orange;
+  height: 58px;
+  .content {
+    .logo {
+      transform: scale(0.7);
+    }
+    .menu {
+      .link {
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+}
+.link {
+  display: grid;
+  grid-template-rows: 1fr 4px;
+  height: 100%;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+
+  hr {
+    transition: all 0.1s linear;
+    min-width: 60px;
+    opacity: 1;
+    width: 100%;
+    margin: 0;
+    border: 2px solid $orange;
+  }
+  a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 16px;
+      color: $white;
+      font-weight: 500;
+    }
+  }
+}
+.footer {
+  display: grid;
+  width: 100%;
+  place-items: center;
+
+  background: $black;
+  .content {
+    max-width: 1440px;
+    padding: 24px 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span {
+        color: $orange;
+      }
+    }
+    .links {
+      display: grid;
+      grid-template: repeat(3, min-content) / repeat(2, min-content);
+      flex-wrap: wrap;
+      grid-gap: 12px 24px;
+      width: 200px;
+      height: 100%;
+    }
+    .social {
+      display: grid;
+      align-items: stretch;
+      span {
+        font-size: 24px;
+        color: $white;
+        font-weight: 700;
+      }
+      .icons {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 24px;
+      }
+    }
+  }
+}

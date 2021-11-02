@@ -1,0 +1,45 @@
+@import "/src/vars.scss";
+.contact {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 124px 0;
+  background: $grey;
+  position: relative;
+  .content {
+    max-width: 1440px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .images {
+      z-index: 2;
+   
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 64px;
+      max-width: 470px;
+      width: 100%;
+      h1 {
+        span {
+          color: $orange;
+        }
+      }
+      form {
+        display: grid;
+        row-gap: 36px;
+      }
+    }
+  }
+  .background {
+    position: absolute;
+    background: #dce1da;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+  }
+}

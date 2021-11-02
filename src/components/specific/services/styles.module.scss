@@ -1,0 +1,47 @@
+@import "/src/vars.scss";
+.services {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  background: $grey;
+  padding: 124px 0;
+  .content {
+    max-width: 1440px;
+    display: grid;
+    row-gap: 64px;
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 24px;
+      p {
+        max-width: 800px;
+        text-align: center;
+        color: $black;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+    .targets {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 64px;
+      .targetService {
+        display: grid;
+        flex: 1;
+        row-gap: 36px;
+        align-items: center;
+        .icon {
+          display: flex;
+          justify-self: center;
+        }
+        span {
+          color: $black;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
