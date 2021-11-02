@@ -18,17 +18,17 @@ function Contact(): JSX.Element {
               placeholder="Name"
             />
             <InputText
-              name="name"
+              name="email"
               onChange={(e: any) => console.log(e)}
               value=""
-              placeholder="Name"
+              placeholder="Email"
             />
 
             <InputText
               name="name"
               onChange={(e: any) => console.log(e)}
               value=""
-              placeholder="Name"
+              placeholder="Phone"
             />
 
             <div className={styles.action}>
