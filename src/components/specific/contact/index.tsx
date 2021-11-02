@@ -36,7 +36,7 @@ function Contact(): JSX.Element {
     setSend(true);
   };
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id='contact'>
       <div className={styles.content}>
         <div className={styles.form}>
           <h1>

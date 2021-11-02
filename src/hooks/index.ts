@@ -6,7 +6,7 @@ export function useGetScroll(
 ): any {
   useEffect(() => {
     function getScroll() {
-      if (window.scrollY >= 760) {
+      if (window.scrollY >= 740) {
         isRef.current.classList.add(currentClass.styles.active);
       } else {
         isRef.current.classList.remove(currentClass.styles.active);

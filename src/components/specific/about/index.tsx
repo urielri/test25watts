@@ -3,7 +3,7 @@ import Button from "components/utils/inputs/button";
 function About(props: { data: any }) {
   const { data } = props;
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="about">
       <div className={styles.content}>
         <div className={styles.img}>
           <img src={data[0].img} alt="about" />

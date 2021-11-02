@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 function Services(props: { data: any }): JSX.Element {
   const { data } = props;
   return (
-    <div className={styles.services}>
+    <div className={styles.services} id='services'>
       <div className={styles.content}>
         <div className={styles.info}>
           <h1>Services</h1>

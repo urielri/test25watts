@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 function Details(props: { data: any }): JSX.Element {
   const { data } = props;
   return (
-    <div className={styles.details}>
+    <div className={styles.details} id='details'>
       <div className={styles.content}>
         <div className={styles.info}>
           <h1>More details</h1>

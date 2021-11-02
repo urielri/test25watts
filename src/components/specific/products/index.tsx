@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 function Products(props: { data: any }): JSX.Element {
   const { data } = props;
   return (
-    <div className={styles.products}>
+    <div className={styles.products} id='products'>
       <div className={styles.content}>
         <div className={styles.info}>
           <span>Products</span>

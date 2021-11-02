@@ -59,7 +59,7 @@ function HeroCarrousel(props: {data:any}) {
     setCurrent(e);
   };
   return (
-    <div className={styles.containerCarrousel}>
+    <div className={styles.containerCarrousel} id='home'>
       <div className={styles.carrousel} ref={r}>
         {data.map((res: any) => (
           <div className={styles.item} key={res.id}>

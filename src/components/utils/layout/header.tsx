@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useResize, useGetScroll } from "hooks";
-import Link from "./link";
+import LinkB from "./link";
+
 import styles from "./styles.module.scss";
 function Header(): JSX.Element {
   const headerRef = useRef(null);
@@ -16,12 +17,14 @@ function Header(): JSX.Element {
           <img src="/logo_25w.png" alt="25 watts" />
         </div>
         <div className={styles.menu}>
-          <Link href="#" label="Home" line={true} />
-          <Link href="#" label="About us" />
-          <Link href="#" label="Services" />
-          <Link href="#" label="Products" />
-          <Link href="#" label="Details" />
-          <Link href="#" label="Contact" />
+          <LinkB href="home" label="Home" line={true} />
+
+          <LinkB href="about" label="About us" />
+
+          <LinkB href="services" label="Services" />
+          <LinkB href="products" label="Products" />
+          <LinkB href="details" label="Details" />
+          <LinkB href="contact" label="Contact" />
         </div>
       </div>
     </div>
