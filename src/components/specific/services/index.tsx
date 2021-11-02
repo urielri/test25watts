@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
-function Services(): JSX.Element {
+function Services(props: { data: any }): JSX.Element {
+  const { data } = props;
   return (
     <div className={styles.services}>
       <div className={styles.content}>
@@ -12,22 +13,9 @@ function Services(): JSX.Element {
           </p>
         </div>
         <div className={styles.targets}>
-          <Target
-            icon="/services/cloud.svg"
-            title="Stet clita kasd gubergren"
-          />
-          <Target
-            icon="/services/earth.svg"
-            title="Stet clita kasd gubergren"
-          />
-          <Target
-            icon="/services/friends.svg"
-            title="Stet clita kasd gubergren"
-          />
-          <Target
-            icon="/services/friends.svg"
-            title="Stet clita kasd gubergren"
-          />
+          {data.map((res: any) => (
+            <Target icon={res.img} title={res.title} />
+          ))}
         </div>
       </div>
     </div>

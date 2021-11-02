@@ -16,6 +16,7 @@
       row-gap: 24px;
       p {
         max-width: 800px;
+        width: auto;
         text-align: center;
         color: $black;
         font-size: 16px;
@@ -23,12 +24,15 @@
       }
     }
     .targets {
+      width: 100%;
+      justify-content: center;
       display: flex;
+      flex: 1;
       flex-wrap: wrap;
-      column-gap: 64px;
+      gap: 64px;
       .targetService {
         display: grid;
-        flex: 1;
+    
         row-gap: 36px;
         align-items: center;
         .icon {

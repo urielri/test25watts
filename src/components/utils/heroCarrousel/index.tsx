@@ -6,7 +6,7 @@ const arr = [
     id: 0,
     src: "/hero/slide1-background.png",
     title:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
+      "Sed ut perspiciatis unde omnis iste natus ",
     description:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
     button: "Read more",
@@ -32,7 +32,8 @@ const arr = [
   },
 ];
 let timer: any;
-function HeroCarrousel() {
+function HeroCarrousel(props: {data:any}) {
+  const {data} = props
   const r: any = useRef(null);
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState(0);
@@ -41,11 +42,9 @@ function HeroCarrousel() {
     timer = setTimeout(() => {
       let aux = current + 1 >= arr.length ? 0 : current + 1;
       setCurrent(aux);
-      console.log("aaaa", current);
     }, 6000);
   };
   useEffect(() => {
-    console.log(r.current);
 
     r.current.childNodes[prev].classList.remove(styles.active);
     r.current.childNodes[current].classList.add(styles.active);
@@ -62,10 +61,10 @@ function HeroCarrousel() {
   return (
     <div className={styles.containerCarrousel}>
       <div className={styles.carrousel} ref={r}>
-        {arr.map((res) => (
+        {data.map((res: any) => (
           <div className={styles.item} key={res.id}>
             <div
-              key={res.id}
+          
               style={{ backgroundImage: `url(${res.src})` }}
               className={styles.img}
             ></div>

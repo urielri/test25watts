@@ -9,9 +9,6 @@ function Header(): JSX.Element {
   });
   const device = useResize();
   const getScroll = useGetScroll(headerRef, header, styles);
-  useEffect(() => {
-    console.log(getScroll);
-  }, [getScroll]);
   return (
     <div className={`${header.styles.class}`} ref={getScroll}>
       <div className={styles.content}>

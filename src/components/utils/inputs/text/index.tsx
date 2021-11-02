@@ -1,3 +1,4 @@
+import {memo} from 'react'
 import styles from "../styles.module.scss";
 function InputText(props: {
   placeholder: string;
@@ -18,4 +19,4 @@ function InputText(props: {
     </div>
   );
 }
-export default InputText;
+export default memo(InputText);

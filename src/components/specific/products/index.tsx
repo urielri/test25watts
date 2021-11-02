@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 
-function Products(): JSX.Element {
+function Products(props: { data: any }): JSX.Element {
+  const { data } = props;
   return (
     <div className={styles.products}>
       <div className={styles.content}>
@@ -9,35 +10,16 @@ function Products(): JSX.Element {
           <h1>In eget tortor tempor mollis purus</h1>
         </div>
         <div className={styles.targets}>
-          <div className={styles.direction}><img src="/arrow-left.svg" alt="" /></div>
-          <Target
-            title="Aliquam at dui lorem ipsum"
-            list={[
-              "- Ut mattis gravida efficitur.",
-              " - Ut feugiat vehicula nibh, efficitur laoreet justo. ",
-              "- Molestie id. Integer varius enim sit amet egestas. ",
-              "- Ut mattis gravida efficitur.",
-            ]}
-          />
-          <Target
-            title="Aliquam at dui lorem ipsum"
-            list={[
-              "- Ut mattis gravida efficitur.",
-              " - Ut feugiat vehicula nibh, efficitur laoreet justo. ",
-              "- Molestie id. Integer varius enim sit amet egestas. ",
-              "- Ut mattis gravida efficitur.",
-            ]}
-          />
-          <Target
-            title="Aliquam at dui lorem ipsum"
-            list={[
-              "- Ut mattis gravida efficitur.",
-              " - Ut feugiat vehicula nibh, efficitur laoreet justo. ",
-              "- Molestie id. Integer varius enim sit amet egestas. ",
-              "- Ut mattis gravida efficitur.",
-            ]}
-          />
-           <div className={styles.direction}><img src="/arrow-right.svg" alt="" /></div>
+          <div className={styles.direction}>
+            <img src="/arrow-left.svg" alt="" />
+          </div>
+          {data.map((res: any) => (
+            <Target title={res.title} list={res.list} />
+          ))}
+       
+          <div className={styles.direction}>
+            <img src="/arrow-right.svg" alt="" />
+          </div>
         </div>
       </div>
     </div>

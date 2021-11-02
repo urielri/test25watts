@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
-function Details(): JSX.Element {
+function Details(props: { data: any }): JSX.Element {
+  const { data } = props;
   return (
     <div className={styles.details}>
       <div className={styles.content}>
@@ -12,26 +13,9 @@ function Details(): JSX.Element {
           </p>
         </div>
         <div className={styles.targets}>
-          <Target
-            icon="/details/anchor.svg"
-            description="Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper."
-          />
-             <Target
-            icon="/details/anchor.svg"
-            description="Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper."
-          />
-             <Target
-            icon="/details/anchor.svg"
-            description="Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper."
-          />
-             <Target
-            icon="/details/anchor.svg"
-            description="Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper."
-          />
-             <Target
-            icon="/details/anchor.svg"
-            description="Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper."
-          />
+          {data.map((res: any) => (
+            <Target icon={res.img} description={res.title} />
+          ))}
         </div>
       </div>
     </div>

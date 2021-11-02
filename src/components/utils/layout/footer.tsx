@@ -12,9 +12,9 @@ function Footer(): JSX.Element {
     <div className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.about}>
-          <div>
+       
             <img src="/logo_25w.png" alt="25 watts" />
-          </div>
+  
           <span>2020 © All rights reserved.</span>
         </div>
         <div className={styles.links}>
